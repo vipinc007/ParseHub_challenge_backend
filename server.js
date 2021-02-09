@@ -4,11 +4,11 @@ const cors = require("cors");
 var rest_routes = require("./Routes");
 
 const app = express();
-const port = 4000;
+const port = 3000;
 
 app.use(express.json());
 app.use(cors());
 
 app.use("/", rest_routes);
 
-app.listen(port || 3000, () => console.log(`started at ${port}`));
+app.listen(port, () => console.log(`started at ${port}`));
